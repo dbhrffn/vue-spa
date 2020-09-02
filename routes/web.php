@@ -12,5 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/{any}', 'MainController@index')->where('any', '.*');
 
-Route::get('/{any}', 'AppController@index')->where('any', '.*');
+    Route::post('login', 'Auth\LoginController@login');
+    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+});
