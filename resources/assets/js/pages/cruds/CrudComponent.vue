@@ -13,7 +13,7 @@
           :selected="col === color ? 'selected' : ''"
         >{{ col | properCase }}</option>
       </select>
-      <button @click="del">Delete</button>
+      <v-btn @click="del">Delete</v-btn>
     </div>
   </div>
 </template>

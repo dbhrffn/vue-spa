@@ -5,29 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Laravel Vue SPA Starter Project</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #d1d1d1
-    }
-    #mute {
-      position: absolute;
-    }
-    #mute.on {
-      opacity: 0.7;
-      z-index: 1000;
-      background: white;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/css/app.css">
+  <title>SPA</title>
 </head>
 <body>
+
 <div id="app"></div>
-<script src="js/app.js"></script>
+
+@if( app()->environment('local') )
+  <script src="{{ mix('js/main.js') }}"></script>
+@else
+  <script src="{{ url('/js/main.js') }}"></script>
+@endif
 </body>
 </html>

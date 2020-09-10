@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>Simple Crud Operation</div>
         <crud-component
         v-for="crud in cruds"
         v-bind="crud"
@@ -11,7 +12,7 @@
         @delete="del"
         ></crud-component>
         <div>
-        <button @click="create">Add</button>
+        <v-btn @click="create">Add</v-btn>
         </div>
     </div>
 </template>

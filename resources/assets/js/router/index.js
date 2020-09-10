@@ -1,6 +1,8 @@
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
-import CrudHome from '../views/cruds/CrudHome.vue';
+import Home from '../pages/Home.vue';
+import About from '../pages/About.vue';
+import Crud from '../pages/cruds/CrudHome.vue';
+import Order from '../pages/orders/OrderHome.vue';
+import Event from '../pages/events/EventHome.vue';
 
 export default {
     mode: 'history',
@@ -19,7 +21,17 @@ export default {
         {
             path: '/cruds',
             name: 'crudhome',
-            component: CrudHome,
+            component: Crud,
+        },
+        {
+            path: '/orders',
+            name: 'orderhome',
+            component: Order,
+        },
+        {
+            path: '/events',
+            name: 'eventhome',
+            component: Event,
         }
     ]
 }

@@ -16,6 +16,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('/cruds', 'CrudsController', [
+Route::resource('/cruds', 'API\CrudsController', [
     'except' => ['edit', 'show', 'store']
 ]);
