@@ -19,7 +19,7 @@ const app = new Vue({
   store,
   router: new VueRouter(routes),
   components: {
-    App
+    App,
   },
   render: h => h(App)
-}).$mount('#app')
+})

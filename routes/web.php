@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'web'], function () {
     Route::get('/{any}', 'MainController@index')->where('any', '.*');
 
-    Route::post('login', 'Auth\LoginController@login');
-    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    // Route::post('login', 'Auth\LoginController@login');
+    // Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 });
