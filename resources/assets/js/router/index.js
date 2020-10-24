@@ -3,6 +3,7 @@ import About from '../pages/About.vue';
 import Crud from '../pages/cruds/CrudHome.vue';
 import Order from '../pages/orders/OrderHome.vue';
 import Event from '../pages/events/EventHome.vue';
+import Todos from '../pages/todos/Todos.vue';
 
 export default {
     mode: 'history',
@@ -32,6 +33,11 @@ export default {
             path: '/events',
             name: 'eventhome',
             component: Event,
+        },
+        {
+            path: '/todos',
+            name: 'todos',
+            component: Todos,
         }
     ]
 }

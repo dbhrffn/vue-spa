@@ -51,6 +51,16 @@
             </v-list-item-content>
             </v-list-item>
 
+            <v-list-item :to="{ name: 'todos' }">
+            <v-list-item-action>
+                <v-icon>mdi-tooltip</v-icon>
+            </v-list-item-action>
+
+            <v-list-item-content>
+                <v-list-item-title>Todos</v-list-item-title>
+            </v-list-item-content>
+            </v-list-item>
+
         </v-list>
     </div>
 </template>
